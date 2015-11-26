@@ -123,9 +123,9 @@ print ("media id = " + str(image_ids['media_id']) )
 statusvalue1="@OHCollaborative Live Stream cam #Youngstown city weather action @YoungstownOHrr #makerspace #RaspberryPI southside"
 statusvalue2="@OHCollaborative Youngstown Ohio City scape outdoor weather cam backyard test system http://goo.gl/EgEsfl"
 statusvalue3="@OHCollaborative #Youngstown city weather view @Youngstown_Buzz #makerspace #RaspberryPI southside"
+statusvalue4="@OHCollaborative HappyThanksgiving CAM of #Youngstown weather #makerspace #RaspberryPI southside"
 
-
-statusupdate=twitter.update_status(status=statusvalue3 ,media_ids=image_ids['media_id'])
+statusupdate=twitter.update_status(status=statusvalue4 ,media_ids=image_ids['media_id'])
 
 print(statusupdate)
 
