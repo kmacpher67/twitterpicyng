@@ -14,19 +14,18 @@ url= "http://192.168.1.88/tmpfs/auto.jpg"
 user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
 auth ="Basic YWRtaW46YWRtaW4="
 headers = { 'User-Agent' : user_agent, 'Authorization': auth }
-username = "admin"
-password = "admin"
-CONSUMER_KEY = "9pDZHBl8diH6nC1n2CdrJXCMo"
-CONSUMER_SECRET = "JuUi3LYJBVhMffihmTGUhAPy3LhVeGPHvGuEfu3IkUBMrEmM65"
-ACCESS_KEY = "17961805-SFeUb1SBg4CjNsepZbC9EGwhx4QbRSAMAaiHTyFQV"
-ACCESS_SECRET = "wftwTZigBEiOzL90SyLSRGRot2Vdk71Y67SkUBw24xQ95"
+# username = "user"
+# password = "user"
+# CONSUMER_KEY = "9pDZHBl8diH6nC1n2CdrJXCMo"
+# CONSUMER_SECRET = "JuUi3LYJBVhMffihmTGUhAPy3LhVeGPHvGuEfu3IkUBMrEmM65"
+# ACCESS_KEY = "17961805-SFeUb1SBg4CjNsepZbC9EGwhx4QbRSAMAaiHTyFQV"
+# ACCESS_SECRET = "wftwTZigBEiOzL90SyLSRGRot2Vdk71Y67SkUBw24xQ95"
 
 dayval = str(datetime.datetime.today().day)
 print ("dayval = " + dayval )
 
 hourval = str(datetime.datetime.today().hour)
 print ("hourval = " + hourval )
-
 
 # {u'image': {u'image_type': u'image/jpeg', u'h': 352, u'w': 640}, u'media_id_string': u'668837656852348928', u'media_id':
  # 668837656852348928L, u'expires_after_secs': 86400, u'size': 104529}
@@ -51,12 +50,40 @@ print ("statusMax=" + str(statusMax))
 statusIndex = random.randint(0,statusMax)
 print ("statusIndex =" + str(statusIndex))
 
-shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras"]
+shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras"]
 shoutIndex = random.randint(0,len(shoutOuts)-1)
 
 newStatus = statusList[statusIndex] + " " +hourval+ " " + shoutOuts[shoutIndex]
 print("newStatus=" + newStatus)
 
+class ReadProperties():
+    def __init__(self):
+		self.myprops = {}
+		with open('filename.properties', 'r') as f:
+			for line in f:
+				line = line.rstrip() #removes trailing whitespace and '\n' chars
+				print("line="+line)
+				if "=" not in line: continue #skips blanks and comments w/o =
+				if line.startswith("#"): continue #skips comments which contain =
+
+				k, v = line.split("=", 1)
+				print("key="+k +" value=" +v)
+				self.myprops[k] = v
+
+rp=ReadProperties()
+props = rp.myprops
+print ("props="+ str(props["ACCESS_KEY"])) 				
+print ("test="+ props["test"]) 				
+
+username = props["username"]
+password = props["password"]
+CONSUMER_KEY = props["CONSUMER_KEY"]
+CONSUMER_SECRET = props["CONSUMER_SECRET"]
+ACCESS_KEY = props["ACCESS_KEY"]
+ACCESS_SECRET = props["ACCESS_SECRET"]
+
+print ("username=" + username + " password=" + password+ " CONSUMER_KEY =" + CONSUMER_KEY + " CONSUMER_SECRET ="+CONSUMER_SECRET +" ACCESS_KEY=" +ACCESS_KEY)
+				
 class MyHTMLParser(HTMLParser):
     def __init__(self):
         HTMLParser.__init__(self)
