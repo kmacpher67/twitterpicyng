@@ -24,6 +24,10 @@ ACCESS_SECRET = "wftwTZigBEiOzL90SyLSRGRot2Vdk71Y67SkUBw24xQ95"
 dayval = str(datetime.datetime.today().day)
 print ("dayval = " + dayval )
 
+hourval = str(datetime.datetime.today().hour)
+print ("hourval = " + hourval )
+
+
 # {u'image': {u'image_type': u'image/jpeg', u'h': 352, u'w': 640}, u'media_id_string': u'668837656852348928', u'media_id':
  # 668837656852348928L, u'expires_after_secs': 86400, u'size': 104529}
 # 1448301806
@@ -33,19 +37,24 @@ print ("dayval = " + dayval )
 statusvalue1="@OHCollaborative Live Stream cam #Youngstown city weather action #makerspace http://goo.gl/EgEsfl"
 statusvalue2="@OHCollaborative #Youngstown Ohio City scape outdoor weather cam system http://goo.gl/EgEsfl"
 statusvalue3="@OHCollaborative #Youngstown city weather view @Youngstown_Buzz #makerspace #RaspberryPI southside"
-statusvalue4="@OHCollaborative Check hr hairdo #Youngstown weather #makerspace #RaspberryPI southside"
+statusvalue4="@OHCollaborative Check yr hairdo #Youngstown weather #makerspace #RaspberryPI southside"
 statusvalue5="@OHCollaborative #Youngstown weather camera #makerspace #RaspberryPI southside @21WFMJ"
+statusvalue6="@OHCollaborative #Youngstown weather cam #makerspace tech best southside view city http://goo.gl/EgEsfl"
+statusvalue7="@OHCollaborative #Youngstown weather camera #makerspace #RaspberryPI southside @21WFMJ"
+statusvalue8="@OHCollaborative #Youngstown weather cam #makerspace training tech innovation southside neighborhood"
+statusvalue9="@OHCollaborative #Youngstown weather camera #makerspace #3dprinting startups mentoring"
 
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5]
+
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9]
 statusMax = len(statusList)-1
 print ("statusMax=" + str(statusMax))
 statusIndex = random.randint(0,statusMax)
 print ("statusIndex =" + str(statusIndex))
 
-shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN"]
+shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras"]
 shoutIndex = random.randint(0,len(shoutOuts)-1)
 
-newStatus = statusList[statusIndex] + " " + shoutOuts[shoutIndex]
+newStatus = statusList[statusIndex] + " " +hourval+ " " + shoutOuts[shoutIndex]
 print("newStatus=" + newStatus)
 
 class MyHTMLParser(HTMLParser):
