@@ -1,9 +1,12 @@
 import datetime
+import random
 import sys
 import urllib2
 from twython import Twython
 from HTMLParser import HTMLParser
 
+VERSION="1.0.2015.11.29"
+print ("version=" + VERSION)
 urlPage = "http://192.168.1.88/tmpfs/auto.jpg"
 # puts the time in ms on it. /tmpfs/auto.jpg
 url= "http://192.168.1.88/tmpfs/auto.jpg"
@@ -21,6 +24,29 @@ ACCESS_SECRET = "wftwTZigBEiOzL90SyLSRGRot2Vdk71Y67SkUBw24xQ95"
 dayval = str(datetime.datetime.today().day)
 print ("dayval = " + dayval )
 
+# {u'image': {u'image_type': u'image/jpeg', u'h': 352, u'w': 640}, u'media_id_string': u'668837656852348928', u'media_id':
+ # 668837656852348928L, u'expires_after_secs': 86400, u'size': 104529}
+# 1448301806
+# 413
+#             1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 
+#            "                  2         3         4         5         6         7         8         9         x       110       120        130      140
+statusvalue1="@OHCollaborative Live Stream cam #Youngstown city weather action #makerspace http://goo.gl/EgEsfl"
+statusvalue2="@OHCollaborative #Youngstown Ohio City scape outdoor weather cam system http://goo.gl/EgEsfl"
+statusvalue3="@OHCollaborative #Youngstown city weather view @Youngstown_Buzz #makerspace #RaspberryPI southside"
+statusvalue4="@OHCollaborative Check hr hairdo #Youngstown weather #makerspace #RaspberryPI southside"
+statusvalue5="@OHCollaborative #Youngstown weather camera #makerspace #RaspberryPI southside @21WFMJ"
+
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5]
+statusMax = len(statusList)-1
+print ("statusMax=" + str(statusMax))
+statusIndex = random.randint(0,statusMax)
+print ("statusIndex =" + str(statusIndex))
+
+shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN"]
+shoutIndex = random.randint(0,len(shoutOuts)-1)
+
+newStatus = statusList[statusIndex] + " " + shoutOuts[shoutIndex]
+print("newStatus=" + newStatus)
 
 class MyHTMLParser(HTMLParser):
     def __init__(self):
@@ -113,19 +139,10 @@ y=twitter.get_lastfunction_header('X-Rate-Limit-Reset')
 print(y)
 z=twitter.get_lastfunction_header('x-rate-limit-remaining')
 print(z)
-# {u'image': {u'image_type': u'image/jpeg', u'h': 352, u'w': 640}, u'media_id_string': u'668837656852348928', u'media_id':
- # 668837656852348928L, u'expires_after_secs': 86400, u'size': 104529}
-# 1448301806
-# 413
-#             1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 
-#            "                  2         3         4         5         6         7         8         9         x       110       120        130      140
-print ("media id = " + str(image_ids['media_id']) )
-statusvalue1="@OHCollaborative Live Stream cam #Youngstown city weather action @YoungstownOHrr #makerspace #RaspberryPI southside"
-statusvalue2="@OHCollaborative Youngstown Ohio City scape outdoor weather cam backyard test system http://goo.gl/EgEsfl"
-statusvalue3="@OHCollaborative #Youngstown city weather view @Youngstown_Buzz #makerspace #RaspberryPI southside"
-statusvalue4="@OHCollaborative HappyThanksgiving CAM of #Youngstown weather #makerspace #RaspberryPI southside"
 
-statusupdate=twitter.update_status(status=statusvalue4 ,media_ids=image_ids['media_id'])
+print ("media id = " + str(image_ids['media_id']) )
+
+statusupdate=twitter.update_status(status= newStatus,media_ids=image_ids['media_id'])
 
 print(statusupdate)
 
