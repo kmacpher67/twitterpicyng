@@ -50,7 +50,7 @@ print ("statusMax=" + str(statusMax))
 statusIndex = random.randint(0,statusMax)
 print ("statusIndex =" + str(statusIndex))
 
-shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras", "@SteveWFMJ","@21WFMJNews","@LindsayWFMJ","@CatulloMeats","@V2Youngstown","@9teen84","@HudsonFasteners","@TEDxYoungstown","@NeuvooYoungsto"]
+shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras", "@SteveWFMJ","@21WFMJNews","@LindsayWFMJ","@CatulloMeats","@V2Youngstown","@9teen84","@HudsonFasteners","@TEDxYoungstown","@NeuvooYoungsto","@AmericaMakes", "@RepTimRyan", "@SenSherrodBrown", "@robportman", "@YMCAYoungstown", "@youngstownstate", "@YtownSocial", "@MayorMcNally", "@HenryJGomez", "@DrinkUpYtown", "@YoungstownOHrr", "@NeuvooYoungsto", "@VindyVibe", "@dskolnick"]
 shoutIndex = random.randint(0,len(shoutOuts)-1)
 
 newStatus = statusList[statusIndex] + " " +hourval+ " " + shoutOuts[shoutIndex]
