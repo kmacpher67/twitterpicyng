@@ -42,15 +42,15 @@ statusvalue6="@OHCollaborative #Youngstown weather cam #makerspace tech best sou
 statusvalue7="@OHCollaborative #Youngstown weather camera #makerspace #RaspberryPI southside @21WFMJ"
 statusvalue8="@OHCollaborative #Youngstown weather cam #makerspace training tech innovation southside neighborhood"
 statusvalue9="@OHCollaborative #Youngstown weather camera #makerspace #3dprinting startups mentoring"
+statusvalue0="@OHCollaborative #Youngstown weather camera #makerspace technology 4 learning to earn"
 
-
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9]
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0]
 statusMax = len(statusList)-1
 print ("statusMax=" + str(statusMax))
 statusIndex = random.randint(0,statusMax)
 print ("statusIndex =" + str(statusIndex))
 
-shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras"]
+shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras", "@SteveWFMJ","@21WFMJNews","@LindsayWFMJ","@CatulloMeats","@V2Youngstown","@9teen84","@HudsonFasteners","@TEDxYoungstown","@NeuvooYoungsto"]
 shoutIndex = random.randint(0,len(shoutOuts)-1)
 
 newStatus = statusList[statusIndex] + " " +hourval+ " " + shoutOuts[shoutIndex]
