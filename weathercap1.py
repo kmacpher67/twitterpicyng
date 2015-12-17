@@ -43,14 +43,34 @@ statusvalue7="@OHCollaborative #Youngstown weather camera #makerspace #Raspberry
 statusvalue8="@OHCollaborative #Youngstown weather cam #makerspace training tech innovation southside neighborhood"
 statusvalue9="@OHCollaborative #Youngstown weather camera #makerspace #3dprinting startups mentoring"
 statusvalue0="@OHCollaborative #Youngstown weather camera #makerspace technology 4 learning to earn"
+statusvalue11="Bring tech to you come visit @OHCollaborative #Youngstown weather camera code events!"
+statusvalue12="Hour of Code event tech tues #makers weds 6pm @OHCollaborative #Youngstown weather camera"
+statusvalue13="@codegirlmovie code hour girls find inner power @OHCollaborative #Youngstown weather camera"
+statusvalue14="community space, and small business incubator @OHCollaborative #Youngstown weather camera"
+statusvalue15="Positive force for growth, community, life @OHCollaborative #Youngstown weather camera"
+statusvalue16="community revitalization through small biz dev @OHCollaborative #Youngstown weather camera"
+statusvalue17="reduce the digital divide TECH, CODE @OHCollaborative #Youngstown weather camera"
+statusvalue18="curiosity & imagination incubator @OHCollaborative #Youngstown weather camera"
+statusvalue19="neighborhood beautification & quality of life @OHCollaborative #Youngstown weather camera"
+statusvalue20="#makerspace community center with tools @OHCollaborative #Youngstown weather camera"
+statusvalue21="What can u #makerspace weds 6pm @OHCollaborative #Youngstown weather camera"
+statusvalue22="Rock Shots Photography for special events @OHCollaborative #Youngstown weather camera"
+statusvalue23="#makerspace Learn Social Media Tues 6pm @OHCollaborative #Youngstown weather camera"
+statusvalue24="KBC KIDZ costumed characters & themed cakes #Youngstown weather camera"
+statusvalue25="#makerspace training on tech Tues @OHCollaborative #Youngstown weather camera do it!"
+statusvalue26="Helping everybody United Returning Citizens @OHCollaborative #Youngstown weather camera"
+statusvalue27="Dream, build, innovate YOUR future @OHCollaborative #Youngstown weather camera"
+statusvalue28="Tools, Training, technology innovation @OHCollaborative #Youngstown weather camera"
+statusvalue29="opportunity Citizens 2 make their story @OHCollaborative #Youngstown weather camera"
 
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0]
+
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29]
 statusMax = len(statusList)-1
 print ("statusMax=" + str(statusMax))
 statusIndex = random.randint(0,statusMax)
 print ("statusIndex =" + str(statusIndex))
 
-shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras", "@SteveWFMJ","@21WFMJNews","@LindsayWFMJ","@CatulloMeats","@V2Youngstown","@9teen84","@HudsonFasteners","@TEDxYoungstown","@NeuvooYoungsto","@AmericaMakes", "@RepTimRyan", "@SenSherrodBrown", "@robportman", "@YMCAYoungstown", "@youngstownstate", "@YtownSocial", "@MayorMcNally", "@HenryJGomez", "@DrinkUpYtown", "@YoungstownOHrr", "@NeuvooYoungsto", "@VindyVibe", "@dskolnick","@WYTV","@KristenOlmi"]
+shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras", "@SteveWFMJ","@21WFMJNews","@LindsayWFMJ","@CatulloMeats","@V2Youngstown","@9teen84","@HudsonFasteners","@TEDxYoungstown","@NeuvooYoungsto","@AmericaMakes", "@RepTimRyan", "@SenSherrodBrown", "@robportman", "@YMCAYoungstown", "@youngstownstate", "@YtownSocial", "@MayorMcNally", "@HenryJGomez", "@DrinkUpYtown", "@YoungstownOHrr", "@NeuvooYoungsto", "@VindyVibe", "@dskolnick","@WYTV","@KristenOlmi", "@YWCAYoungstown", "@traceywinbush", "@JackTorry1", "@rmltaylor"]
 shoutIndex = random.randint(0,len(shoutOuts)-1)
 
 newStatus = statusList[statusIndex] + " " +hourval+ " " + shoutOuts[shoutIndex]
