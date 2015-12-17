@@ -62,15 +62,21 @@ statusvalue26="Helping everybody United Returning Citizens @OHCollaborative #You
 statusvalue27="Dream, build, innovate YOUR future @OHCollaborative #Youngstown weather camera"
 statusvalue28="Tools, Training, technology innovation @OHCollaborative #Youngstown weather camera"
 statusvalue29="opportunity Citizens 2 make their story @OHCollaborative #Youngstown weather camera"
+statusvalue30="cooperate, collaborate, innovate, & make @OHCollaborative #Youngstown weather camera"
+statusvalue31="tech training will set you free! @OHCollaborative #Youngstown weather camera"
+statusvalue32="artist makers hackers designers students @OHCollaborative #Youngstown weather camera"
+statusvalue33="THINK BUILD SHARE community center @OHCollaborative #Youngstown weather camera"
+statusvalue34="community development tech biz incubator @OHCollaborative #Youngstown weather camera"
 
 
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29]
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34]
 statusMax = len(statusList)-1
 print ("statusMax=" + str(statusMax))
 statusIndex = random.randint(0,statusMax)
 print ("statusIndex =" + str(statusIndex))
 
-shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras", "@SteveWFMJ","@21WFMJNews","@LindsayWFMJ","@CatulloMeats","@V2Youngstown","@9teen84","@HudsonFasteners","@TEDxYoungstown","@NeuvooYoungsto","@AmericaMakes", "@RepTimRyan", "@SenSherrodBrown", "@robportman", "@YMCAYoungstown", "@youngstownstate", "@YtownSocial", "@MayorMcNally", "@HenryJGomez", "@DrinkUpYtown", "@YoungstownOHrr", "@NeuvooYoungsto", "@VindyVibe", "@dskolnick","@WYTV","@KristenOlmi", "@YWCAYoungstown", "@traceywinbush", "@JackTorry1", "@rmltaylor"]
+shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras", "@SteveWFMJ","@21WFMJNews","@LindsayWFMJ","@CatulloMeats","@V2Youngstown","@9teen84","@HudsonFasteners","@TEDxYoungstown","@NeuvooYoungsto","@AmericaMakes", "@RepTimRyan", "@SenSherrodBrown", "@robportman", "@YMCAYoungstown", "@youngstownstate", "@YtownSocial", "@MayorMcNally", "@HenryJGomez", "@DrinkUpYtown", "@YoungstownOHrr", "@NeuvooYoungsto", "@VindyVibe", "@dskolnick","@WYTV","@KristenOlmi", "@YWCAYoungstown", "@traceywinbush", "@JackTorry1", "@rmltaylor", "@JohnKasich", "@sobeditor", "@stormingorman67", "@VindySweetwood", "@Vindykalea", "@realboomboom" , "@ROCCOVTWEETS", "@ajjaffe", "@TpartyAnita", "@Nick3BP", "@TimContinenza", "@TheBizJournal"]
+
 shoutIndex = random.randint(0,len(shoutOuts)-1)
 
 newStatus = statusList[statusIndex] + " " +hourval+ " " + shoutOuts[shoutIndex]
