@@ -69,8 +69,10 @@ statusvalue33="THINK BUILD SHARE community center @OHCollaborative #Youngstown w
 statusvalue34="community development tech biz incubator @OHCollaborative #Youngstown weather camera"
 statusvalue35="#Innovation improving the quality of life @OHCollaborative #Youngstown weather camera"
 statusvalue36="#StartUp #Tech 4 stronger community @OHCollaborative #Youngstown weather camera"
+statusvalue37="education is eternal @OHCollaborative #Youngstown weather camera Social Media Jan 6@6pm"
 
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36]
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36, statusvalue37]
+
 statusMax = len(statusList)-1
 print ("statusMax=" + str(statusMax))
 statusIndex = random.randint(0,statusMax)
