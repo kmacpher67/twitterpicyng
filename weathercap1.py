@@ -77,9 +77,10 @@ statusvalue41="@OHCollaborative #Youngstown weather camera women innovators make
 statusvalue42="@OHCollaborative #Youngstown weather camera #innovation WEDS@6pm #makerspace tools & tech"
 statusvalue43="@OHCollaborative #Youngstown weather camera nieghborhood tech & love for the good of all"
 statusvalue44="build it #Makerspace it they will come @OHCollaborative #Youngstown weather camera"
-statusvalue45="#Entrepreneur #Innovative @OHCollaborative #Youngstown weather camera #Tech Tues@6pm"
+statusvalue45="#Entrepreneur #Innovative @OHCollaborative #Youngstown weath' #Tech Tues@6pm"
+statusvalue46="Tues@6pm Jan #Social Media @OHCollaborative #Youngstown #accelerator #events #startups"
 
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36, statusvalue37, statusvalue38,statusvalue39, statusvalue40,statusvalue41,statusvalue42, statusvalue43, statusvalue44, statusvalue45]
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36, statusvalue37, statusvalue38,statusvalue39, statusvalue40,statusvalue41,statusvalue42, statusvalue43, statusvalue44, statusvalue45, statusvalue46]
 
 statusMax = len(statusList)-1
 print ("statusMax=" + str(statusMax))
