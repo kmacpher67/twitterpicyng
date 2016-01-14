@@ -88,8 +88,10 @@ statusvalue52="#cityscape #CarpeDiem #civictech open mesh networks @OHCollaborat
 statusvalue53="#Coding and Beyond! Using Skills to Make Products @OHCollaborative #Youngstown weather camera"
 statusvalue54="#Science #STEM catch sunrise #CarpeDiem community @OHCollaborative #Youngstown weather camera"
 statusvalue55="#social $TWTR #training Weds 6pm Small Biz #startup @OHCollaborative #Youngstown weather camera"
+statusvalue56="Helping folks help themselves https://www.facebook.com/returningcitizen @OHCollaborative #Youngstown weather camera"
 
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36, statusvalue37, statusvalue38,statusvalue39, statusvalue40,statusvalue41,statusvalue42, statusvalue43, statusvalue44, statusvalue45, statusvalue46, statusvalue47, statusvalue48, statusvalue49, statusvalue50,statusvalue51, statusvalue52, statusvalue53,statusvalue54,statusvalue55]
+
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36, statusvalue37, statusvalue38,statusvalue39, statusvalue40,statusvalue41,statusvalue42, statusvalue43, statusvalue44, statusvalue45, statusvalue46, statusvalue47, statusvalue48, statusvalue49, statusvalue50,statusvalue51, statusvalue52, statusvalue53,statusvalue54,statusvalue55, statusvalue56]
 
 statusMax = len(statusList)-1
 print ("statusMax=" + str(statusMax))
