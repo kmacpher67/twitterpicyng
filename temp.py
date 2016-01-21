@@ -1,38 +1,18 @@
 import xml.etree.ElementTree as ET
+import urllib2
+import StringIO
 
-data='''<?xml version="1.0" encoding="ISO-8859-1"?>
+urlPage = "http://w1.weather.gov/xml/current_obs/KYNG.xml"
 
-<rss version='2.0' xmlns:dc='http://purl.org/dc/elements/1.1/'> 
-     <channel>
-<title>Weather at Youngstown, Youngstown-Warren Regional Airport, OH - via NOAA's National Weather Service</title>
-<link>http://www.weather.gov/xml/current_obs/</link>
-     <lastBuildDate>Thu, 21 Jan 2016 14:51:00 -0500</lastBuildDate>
-     <ttl>60</ttl>
-     <description>Weather conditions from NOAA's National Weather Service. </description>
-     <language>en-us</language>
-     <managingEditor>robert.bunge@noaa.gov</managingEditor>
-     <webMaster>w-nws.webmaster@noaa.gov</webMaster>
-     <image>
-     <url>http://www.weather.gov/images/xml_logo.gif</url>
-     <title>NOAA - National Weather Service</title>
-     <link>http://www.weather.gov/xml/current_obs/</link>
-     </image> 
-    
-     <item>
-<title>
-Light Snow and 22 F at Youngstown, Youngstown-Warren Regional Airport, OH</title>
-<link>http://weather.noaa.gov/weather/current/KYNG.html</link> 
-<description>
-<![CDATA[<img src="http://forecast.weather.gov/images/wtf/small/sn.png" class="noaaWeatherIcon"  width="55" height="58" alt="Light Snow" style="float:left;" /><br />]]>
-Winds are Variable at 3.5 MPH (3 KT). The pressure is 1027.7 mb and the humidity is 71%.
- Last Updated on Jan 21 2016, 2:51 pm EST.  
-      </description>
-      <guid isPermaLink="false">Thu, 21 Jan 2016 14:51:00 -0500</guid>
-      </item>
-      </channel>
-      </rss>'''
+data = urllib2.urlopen(urlPage).read() 
+#urllib2.urlopen(urlPage).read()
+
+print data
 
 tree = ET.fromstring(data)
-print 'tree:',tree.text
-print 'Name:',tree.find('channel/item/title').text
-print 'Attr:',tree.find('channel/item/description').text
+print 'tree:',tree
+print 'Cond:',tree.find('weather').text
+print 'Temp:',tree.find('temperature_string').text
+print 'Wind:',tree.find('wind_string').text
+print 'Pres:',tree.find('pressure_in').text
+print 'Visb:',tree.find('visibility_mi').text
