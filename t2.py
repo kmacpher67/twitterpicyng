@@ -9,7 +9,9 @@ import os
 #file_names=['w30.jpg', 'w310.jpg', 'w340.jpg', 'w340.jpg', 'w350.jpg', 'w40.jpg', 'w410.jpg', 'w420.jpg', 'w430.jpg', 'w440.jpg', 'w450.jpg']
 #file_names=['w50.jpg', 'w510.jpg', 'w520.jpg', 'w530.jpg', 'w540.jpg', 'w550.jpg', 'w60.jpg', 'w610.jpg', 'w620.jpg', 'w630.jpg', 'w640.jpg', 'w650.jpg']
 #file_names=['yt1.jpg', 'yt2.jpg', 'yt3.jpg', 'yt4.jpg', 'yt5.jpg', 'yt6.jpg', 'yt7.jpg', 'yt8.jpg', 'yt9.jpg'] 
-file_names=['w70.jpg', 'w710.jpg', 'w720.jpg', 'w730.jpg', 'w740.jpg', 'w750.jpg', 'w80.jpg', 'w810.jpg', 'w820.jpg', 'w830.jpg', 'w840.jpg', 'w850.jpg']
+#file_names=['w70.jpg', 'w710.jpg', 'w720.jpg', 'w730.jpg', 'w740.jpg', 'w750.jpg', 'w80.jpg', 'w810.jpg', 'w820.jpg', 'w830.jpg', 'w840.jpg', 'w850.jpg']
+#file_names=['w90.jpg', 'w910.jpg', 'w920.jpg', 'w930.jpg', 'w940.jpg', 'w950.jpg', 'w100.jpg', 'w1010.jpg', 'w1020.jpg', 'w1030.jpg', 'w1040.jpg', 'w1050.jpg']
+file_names=['w110.jpg', 'w1110.jpg', 'w1120.jpg', 'w1130.jpg', 'w1140.jpg', 'w1150.jpg', 'w120.jpg', 'w1210.jpg', 'w1220.jpg', 'w1230.jpg', 'w1240.jpg', 'w1250.jpg', 'w130.jpg', 'w1310.jpg', 'w1320.jpg', 'w1330.jpg', 'w1340.jpg', 'w1350.jpg', 'w140.jpg', 'w1410.jpg', 'w1420.jpg', 'w1430.jpg', 'w1440.jpg', 'w1450.jpg']
 
 images = [Image.open(fn) for fn in file_names]
 
