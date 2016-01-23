@@ -1,0 +1,14 @@
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+*/49 11-15,21-23 * * * cd /root/twitterpic;/root/twitterpic/sunset.sh
+*/10 * * * * /root/twitterpic/gitsync.sh
+*/10 * * * * cd /root/twitterpic;python /root/twitterpic/camcap.py
+#*/4 5,6,7,18,19,20,21 * * * cd /root/twitterpic;python /root/twitterpic/camcap.py
+*/5 5,6,7,17,18 * * * cd /root/twitterpic;python /root/twitterpic/camcap.py
+35 9 * * * cd /root/twitterpic;/root/twitterpic/sunrise.sh
+12 18,19,20 * * * cd /root/twitterpic;/root/twitterpic/sunset.sh
+#12 18 * * * cd /root/twitterpic;/root/twitterpic/sunset.sh
+12 8,12,23 * * * cd /root/twitterpic;/root/twitterpic/cleanup.sh
+32 21 * * * cd /root/twitterpic;/root/twitterpic/sunset.sh
+
