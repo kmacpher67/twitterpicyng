@@ -72,3 +72,27 @@ If you get this error then you need to install python library Twython using pip 
 ```
 sudo pip install twython
 ```
+
+# Error for properties file 
+
+You need to create a properties file and edit your twitter fun stuff to it. 
+
+```
+Traceback (most recent call last):
+  File "camcap.py", line 127, in <module>
+    rp=ReadProperties()
+  File "camcap.py", line 116, in __init__
+    with open('filename.properties', 'r') as f:
+IOError: [Errno 2] No such file or directory: 'filename.properties'
+```
+
+```
+cat filename.properties
+username=admin
+password=admin
+CONSUMER_KEY=<<<PUTKEYFROMTWITTERAPP>>
+CONSUMER_SECRET=<<PUTSECRETFROMTWITTERAPP>>
+ACCESS_KEY=<<FROMTWITTERAPPMUSTCHANGEALLTHESE>>
+ACCESS_SECRET=<<ANOTHERBIGLONGTHINGFROMTWITTER>>
+test=testie
+```
