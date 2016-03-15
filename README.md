@@ -56,3 +56,19 @@ gitsync.sh
 cd /home/pi/twitterpic/
 git pull 
 ```
+
+# install twython
+
+```
+pi@raspberrypi ~/twitterpicyng $ python camcap.py
+Traceback (most recent call last):
+  File "camcap.py", line 5, in <module>
+    from twython import Twython
+ImportError: No module named twython
+pi@raspberrypi ~/twitterpicyng $
+```
+If you get this error then you need to install python library Twython using pip or easy install. Which is easy on Raspberry PI or Linux but not so much on Windows. https://twython.readthedocs.org/en/latest/usage/install.html 
+
+```
+sudo pip install twython
+```
