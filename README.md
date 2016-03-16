@@ -96,7 +96,7 @@ IOError: [Errno 2] No such file or directory: 'filename.properties'
 # Create a properties file 
 
 ```
-cat filename.properties
+cat >filename.properties
 username=admin
 password=admin
 CONSUMER_KEY=<<<PUTKEYFROMTWITTERAPP>>
