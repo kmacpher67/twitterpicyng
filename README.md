@@ -46,6 +46,9 @@ The Raspberry PI is setup with two crontab -e (crontab is the command one uses t
 
 ```
 */30 * * * * python /home/pi/twitterpic/weathercap1.py
+*/2 * * * * cd /home/pi/twitterpicyng;python camcap.py
+13,32 7 * * *  cd /home/pi/twitterpicyng;python t4.py; python twitup.py
+11 1,6,12,18 * * * cd /home/pi/twitterpicyng/cleanup.sh
 ```
 
 
