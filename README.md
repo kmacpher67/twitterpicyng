@@ -93,7 +93,7 @@ Traceback (most recent call last):
 IOError: [Errno 2] No such file or directory: 'filename.properties'
 ```
 
-# Make properties file 
+# Create a properties file 
 
 ```
 cat filename.properties
