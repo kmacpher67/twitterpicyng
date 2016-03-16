@@ -8,9 +8,10 @@ This is hastily written code, in python language, by a java programmer, in spare
 We have a IPTV cctv camera mounted on the roof of the building.  This code does a few things. Some of which are not used cause, I didn't need it. 
 
 Install on machine 
-''''
+
+````
 git clone https://github.com/kmacpher67/twitterpicyng.git
-''''
+````
 
 ## Code Review
 
