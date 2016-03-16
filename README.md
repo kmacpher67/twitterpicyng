@@ -7,6 +7,11 @@ This is hastily written code, in python language, by a java programmer, in spare
 
 We have a IPTV cctv camera mounted on the roof of the building.  This code does a few things. Some of which are not used cause, I didn't need it. 
 
+Install on machine 
+''''
+git clone https://github.com/kmacpher67/twitterpicyng.git
+''''
+
 ## Code Review
 
 * Twitter as a content repository.  The code post the pictures to twitter using Twython libary, and https://apps.twitter.com/. Oh god, I put the app keys into the source code in the initial check-in, I'll have to fix that before ISIS or Alquida finds them and starts a twitter storm about porking the west. 
