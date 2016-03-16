@@ -16,6 +16,7 @@ git clone https://github.com/kmacpher67/twitterpicyng.git
 ## Code Review
 
 * Twitter as a content repository.  The code post the pictures to twitter using Twython libary, and https://apps.twitter.com/. Oh god, I put the app keys into the source code in the initial check-in, I'll have to fix that before ISIS or Alquida finds them and starts a twitter storm about porking the west. 
+* Install the Twython library into the 
 * I'm currently posting the media to my personal feed, I'll be switching it over to the OakHill twitter account. 
 * Download the image from the IP Camera using url get and write to local filesystem as weather##.jpg 
 * upload the media to twitter 
@@ -91,6 +92,8 @@ Traceback (most recent call last):
     with open('filename.properties', 'r') as f:
 IOError: [Errno 2] No such file or directory: 'filename.properties'
 ```
+
+# Make properties file 
 
 ```
 cat filename.properties
