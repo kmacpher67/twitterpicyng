@@ -97,9 +97,12 @@ IOError: [Errno 2] No such file or directory: 'filename.properties'
 ```
 
 # Create a properties file 
-
+Creating a new filename.properties file using copy and paste. If you know how to nano or vi, then you know how to create a file and save it. 
 ```
 cat >filename.properties
+```
+after put the follow update your twitter setups replacing the << >> stuff everything after = sign. 
+```
 username=admin
 password=admin
 CONSUMER_KEY=<<<PUTKEYFROMTWITTERAPP>>
@@ -108,3 +111,4 @@ ACCESS_KEY=<<FROMTWITTERAPPMUSTCHANGEALLTHESE>>
 ACCESS_SECRET=<<ANOTHERBIGLONGTHINGFROMTWITTER>>
 test=testie
 ```
+Pres   ''''CTRL+Z''''  to complete writing the filename.properties file. 
