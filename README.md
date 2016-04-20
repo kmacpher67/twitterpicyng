@@ -7,9 +7,16 @@ This is hastily written code, in python language, by a java programmer, in spare
 
 We have a IPTV cctv camera mounted on the roof of the building.  This code does a few things. Some of which are not used cause, I didn't need it. 
 
+Install on machine 
+
+````
+git clone https://github.com/kmacpher67/twitterpicyng.git
+````
+
 ## Code Review
 
 * Twitter as a content repository.  The code post the pictures to twitter using Twython libary, and https://apps.twitter.com/. Oh god, I put the app keys into the source code in the initial check-in, I'll have to fix that before ISIS or Alquida finds them and starts a twitter storm about porking the west. 
+* Install the Twython library into the 
 * I'm currently posting the media to my personal feed, I'll be switching it over to the OakHill twitter account. 
 * Download the image from the IP Camera using url get and write to local filesystem as weather##.jpg 
 * upload the media to twitter 
@@ -39,6 +46,9 @@ The Raspberry PI is setup with two crontab -e (crontab is the command one uses t
 
 ```
 */30 * * * * python /home/pi/twitterpic/weathercap1.py
+*/2 * * * * cd /home/pi/twitterpicyng;python camcap.py
+13,32 7 * * *  cd /home/pi/twitterpicyng;python t4.py; python twitup.py
+11 1,6,12,18 * * * cd /home/pi/twitterpicyng/cleanup.sh
 ```
 
 
@@ -56,3 +66,49 @@ gitsync.sh
 cd /home/pi/twitterpic/
 git pull 
 ```
+
+# install twython
+
+```
+pi@raspberrypi ~/twitterpicyng $ python camcap.py
+Traceback (most recent call last):
+  File "camcap.py", line 5, in <module>
+    from twython import Twython
+ImportError: No module named twython
+pi@raspberrypi ~/twitterpicyng $
+```
+If you get this error then you need to install python library Twython using pip or easy install. Which is easy on Raspberry PI or Linux but not so much on Windows. https://twython.readthedocs.org/en/latest/usage/install.html 
+
+```
+sudo pip install twython
+```
+
+# Error for properties file 
+
+You need to create a properties file and edit your twitter fun stuff to it. 
+
+```
+Traceback (most recent call last):
+  File "camcap.py", line 127, in <module>
+    rp=ReadProperties()
+  File "camcap.py", line 116, in __init__
+    with open('filename.properties', 'r') as f:
+IOError: [Errno 2] No such file or directory: 'filename.properties'
+```
+
+# Create a properties file 
+Creating a new filename.properties file using copy and paste. If you know how to nano or vi, then you know how to create a file and save it. 
+```
+cat >filename.properties
+```
+after put the follow update your twitter setups replacing the << >> stuff everything after = sign. 
+```
+username=admin
+password=admin
+CONSUMER_KEY=<<<PUTKEYFROMTWITTERAPP>>
+CONSUMER_SECRET=<<PUTSECRETFROMTWITTERAPP>>
+ACCESS_KEY=<<FROMTWITTERAPPMUSTCHANGEALLTHESE>>
+ACCESS_SECRET=<<ANOTHERBIGLONGTHINGFROMTWITTER>>
+test=testie
+```
+Pres   ''''CTRL+Z''''  to complete writing the filename.properties file. 

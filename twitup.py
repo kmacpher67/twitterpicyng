@@ -79,16 +79,16 @@ statusvalue43="@OHCollaborative #Youngstown weather camera neighborhood tech & l
 statusvalue44="build it #Makerspace it they will come @OHCollaborative #Youngstown weather camera"
 statusvalue45="#Entrepreneur #Innovative @OHCollaborative #Youngstown weather camera #Tech Tues@6pm"
 statusvalue46="Tues@6pm Jan #Social Media @OHCollaborative #Youngstown #accelerator #events #startups"
-statusvalue47="#Tech Tues@6pm @OHCollaborative #Youngstown weather camera #accelerator #events #MARKETING #MEDIA"
-statusvalue48="@3dprinterworks #CES2016 booth 73133 @3DFuel stop by see accurate, fast & reliable Creatorbot3d think click print"
-statusvalue49="#3dPrinting #innovation #Ohio #Manufacturing Industry @OHCollaborative #Youngstown weather camera"
-statusvalue50="#3dPrinting #Manufacturing CreatorBot3D Click Print build @OHCollaborative #Youngstown weather camera"
-statusvalue51="#cityscape #SeedsOfHope #GrowthHacking #opendata & civic hacking @OHCollaborative #Youngstown weather camera"
+statusvalue47="#Tech Tues@6pm @OHCollaborative #Youngstown weather camera #accelerator #events #MARKETING "
+statusvalue48="@3dprinterworks @OHCollaborative #Youngstown weather camera #3dprinting CREATORBOT"
+statusvalue49="#3dPrinting #innovation #Ohio #Manufacturing @OHCollaborative #Youngstown weather camera"
+statusvalue50="#3dPrinting #Manufacturing Click Print build @OHCollaborative #Youngstown weather camera"
+statusvalue51="#cityscape #SeedsOfHope #GrowthHacking #opendata civic hacking @OHCollaborative #Youngstown weather camera"
 statusvalue52="#cityscape #CarpeDiem #civictech open mesh networks @OHCollaborative #Youngstown weather camera"
 statusvalue53="#Coding and Beyond! Using Skills to Make Products @OHCollaborative #Youngstown weather camera"
 statusvalue54="#Science #STEM catch sunrise #CarpeDiem community @OHCollaborative #Youngstown weather camera"
 statusvalue55="#social $TWTR #training Weds 6pm Small Biz #startup @OHCollaborative #Youngstown weather camera"
-statusvalue56="Helping folks help themselves https://www.facebook.com/returningcitizen @OHCollaborative #Youngstown weather camera"
+statusvalue56="Helping folks help self https://www.facebook.com/returningcitizen @OHCollaborative #Youngstown weather camera"
 statusvalue57="Rapid #web Rails Grails #data #hackathon #Tech Tues 6pm @OHCollaborative #Youngstown weather camera"
 statusvalue58="Programming #raspberrypi #mesh #net networks @OHCollaborative #Youngstown weather camera"
 statusvalue59="PHP Groovy Java #VirtualMachines #Tech Tues 6pm @OHCollaborative #Youngstown weather camera"
@@ -98,16 +98,22 @@ statusvalue62="Learn business acceleration #CRM customers calling SPIN Weds 6pm 
 statusvalue63="Videos Media advertising #Sales training for #startups Weds 6pm @OHCollaborative #Youngstown weather camera"
 statusvalue64="old #School #MBA #Science #growth #community Weds 6pm @OHCollaborative #Youngstown weather camera"
 statusvalue65="#StartupAdvice accelerate #Biz late nights hard work Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue66="Fresh Winds Catering Pineapple Ciroc Chicken WINGS https://t.co/qvx8398MF9 @OHCollaborative #Youngstown weather camera"
+statusvalue66="Fresh Winds Catering Pineapple Chicken WINGS https://t.co/qvx8398MF9 @OHCollaborative #Youngstown weather camera"
 statusvalue67="Fresh Winds Catering hardwork yields GREAT FOOD & RESULTS Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue68="#startup Luck is dividend of sweat more sweat luckier you get Ray Kroc Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue69="@drfbands Luck is dividend of sweat more sweat luckier you get Ray Kroc Wed 6pm @OHCollaborative #Youngstown weather camera"
+statusvalue68="Luck is dividend of sweat more sweat luckier u get Ray Kroc @OHCollaborative #Youngstown weather camera"
+statusvalue69="Luck is dividend of sweat more sweat luckier u get Ray Kroc @OHCollaborative #Youngstown weather camera"
 statusvalue70="Rather b lucky than Good, Glad to be both! @michealdika Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue71="business #accelerator program mentorship, support, & nurture business Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue72="cantenna (a portmanteau blending the words can and antenna) Weds 6pm @OHCollaborative #Youngstown weather camera"
+statusvalue71="business #accelerator program mentorship support business Wed 6p @OHCollaborative #Youngstown weather camera"
+statusvalue72="cantenna portmanteau blending the words can and antenna Weds6p @OHCollaborative #Youngstown weather camera"
+statusvalue73="@drfbands More u sweat luckier you get Ray Kroc @OHCollaborative #Youngstown weather camera"
+statusvalue74="Rather b lucky than Good, Glad to be both! ditka Weds 6pm @OHCollaborative #Youngstown weather camera"
+#               1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 ^M
+#             "                  2         3         4         5         6         7         8         9         x       110       120        130      140^M
 
 
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36, statusvalue37, statusvalue38,statusvalue39, statusvalue40,statusvalue41,statusvalue42, statusvalue43, statusvalue44, statusvalue45, statusvalue46, statusvalue47, statusvalue48, statusvalue49, statusvalue50,statusvalue51, statusvalue52, statusvalue53,statusvalue54,statusvalue55, statusvalue56,statusvalue57,statusvalue58, statusvalue59, statusvalue60,statusvalue61, statusvalue62, statusvalue63, statusvalue64, statusvalue65, statusvalue66, statusvalue67, statusvalue68, statusvalue69,statusvalue70, statusvalue71, statusvalue72]
+
+
+statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36, statusvalue37, statusvalue38,statusvalue39, statusvalue40,statusvalue41,statusvalue42, statusvalue43, statusvalue44, statusvalue45, statusvalue46, statusvalue47, statusvalue48, statusvalue49, statusvalue50,statusvalue51, statusvalue52, statusvalue53,statusvalue54,statusvalue55, statusvalue56,statusvalue57,statusvalue58, statusvalue59, statusvalue60,statusvalue61, statusvalue62, statusvalue63, statusvalue64, statusvalue65, statusvalue66, statusvalue67, statusvalue68, statusvalue69,statusvalue70, statusvalue71, statusvalue72, statusvalue73, statusvalue74]
 
 
 statusMax = len(statusList)-1
@@ -120,8 +126,10 @@ shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN"
 shoutIndex = random.randint(0,len(shoutOuts)-1)
 print("  shoutIndex = " +  str(shoutIndex) +" shoutout size= " + str(len(shoutOuts)) )
 
-newStatus = statusList[statusIndex] + " " +hourval+ " " + shoutOuts[shoutIndex]
+newStatus = statusList[statusIndex][:104] + " " +hourval+ " " + shoutOuts[shoutIndex]
 print("newStatus=" + newStatus)
+print("LENGTH of status=" + str(len(newStatus)))
+
 
 class ReadProperties():
     def __init__(self):
@@ -183,7 +191,7 @@ print(z)
 
 print ("media id = " + str(image_ids['media_id']) )
 
-statusupdate=twitter.update_status(status= newStatus,media_ids=image_ids['media_id'])
+statusupdate=twitter.update_status(status= newStatus[:116],media_ids=image_ids['media_id'])
 
 print(statusupdate)
 
