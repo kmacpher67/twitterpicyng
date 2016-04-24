@@ -2,6 +2,7 @@ import datetime
 import random
 import sys
 import urllib2
+import json
 from twython import Twython
 from HTMLParser import HTMLParser
 
@@ -16,120 +17,16 @@ auth ="Basic YWRtaW46YWRtaW4="
 headers = { 'User-Agent' : user_agent, 'Authorization': auth }
 # username = "user"
 # password = "user"
-# CONSUMER_KEY = "9pDZHBl8diH6nC1n2CdrJXCMo"
-# CONSUMER_SECRET = "JuUi3LYJBVhMffihmTGUhAPy3LhVeGPHvGuEfu3IkUBMrEmM65"
-# ACCESS_KEY = "17961805-SFeUb1SBg4CjNsepZbC9EGwhx4QbRSAMAaiHTyFQV"
-# ACCESS_SECRET = "wftwTZigBEiOzL90SyLSRGRot2Vdk71Y67SkUBw24xQ95"
+# CONSUMER_KEY = "replace"
+# CONSUMER_SECRET = "replace"
+# ACCESS_KEY = "replace"
+# ACCESS_SECRET = "replace"
 
 dayval = str(datetime.datetime.today().day)
 print ("dayval = " + dayval )
 
 hourval = str(datetime.datetime.today().hour)
 print ("hourval = " + hourval )
-
-# {u'image': {u'image_type': u'image/jpeg', u'h': 352, u'w': 640}, u'media_id_string': u'668837656852348928', u'media_id':
- # 668837656852348928L, u'expires_after_secs': 86400, u'size': 104529}
-# 1448301806
-# 413
-#             1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 
-#            "                  2         3         4         5         6         7         8         9         x       110       120        130      140
-statusvalue1="@OHCollaborative Live Stream cam #Youngstown city weather action #makerspace http://goo.gl/EgEsfl"
-statusvalue2="@OHCollaborative #Youngstown Ohio City scape outdoor weather cam system http://goo.gl/EgEsfl"
-statusvalue3="@OHCollaborative #Youngstown city weather view @Youngstown_Buzz #makerspace #RaspberryPI southside"
-statusvalue4="@OHCollaborative Check yr hairdo #Youngstown weather #makerspace #RaspberryPI southside"
-statusvalue5="@OHCollaborative #Youngstown weather camera #makerspace #RaspberryPI southside @21WFMJ"
-statusvalue6="@OHCollaborative #Youngstown weather cam #makerspace tech best southside view city http://goo.gl/EgEsfl"
-statusvalue7="@OHCollaborative #Youngstown weather camera #makerspace #RaspberryPI southside @21WFMJ"
-statusvalue8="@OHCollaborative #Youngstown weather cam #makerspace training tech innovation southside neighborhood"
-statusvalue9="@OHCollaborative #Youngstown weather camera #makerspace #3dprinting startups mentoring"
-statusvalue0="@OHCollaborative #Youngstown weather camera #makerspace technology 4 learning to earn"
-statusvalue11="Bring tech to you come visit @OHCollaborative #Youngstown weather camera code events!"
-statusvalue12="Hour of Code event tech tues #makers weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue13="@codegirlmovie code hour girls find inner power @OHCollaborative #Youngstown weather camera"
-statusvalue14="community space, and small business incubator @OHCollaborative #Youngstown weather camera"
-statusvalue15="Positive force for growth, community, life @OHCollaborative #Youngstown weather camera"
-statusvalue16="community revitalization through small biz dev @OHCollaborative #Youngstown weather camera"
-statusvalue17="reduce the digital divide TECH, CODE @OHCollaborative #Youngstown weather camera"
-statusvalue18="curiosity & imagination incubator @OHCollaborative #Youngstown weather camera"
-statusvalue19="neighborhood beautification & quality of life @OHCollaborative #Youngstown weather camera"
-statusvalue20="#makerspace community center with tools @OHCollaborative #Youngstown weather camera"
-statusvalue21="What can u #makerspace weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue22="Rock Shots Photography for special events @OHCollaborative #Youngstown weather camera"
-statusvalue23="#makerspace Learn Social Media Tues 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue24="KBC KIDZ costumed characters & themed cakes #Youngstown weather camera"
-statusvalue25="#makerspace training on tech Tues @OHCollaborative #Youngstown weather camera do it!"
-statusvalue26="Helping everybody United Returning Citizens @OHCollaborative #Youngstown weather camera"
-statusvalue27="Dream, build, innovate YOUR future @OHCollaborative #Youngstown weather camera"
-statusvalue28="Tools, Training, technology innovation @OHCollaborative #Youngstown weather camera"
-statusvalue29="opportunity Citizens 2 make their story @OHCollaborative #Youngstown weather camera"
-statusvalue30="cooperate, collaborate, innovate, & make @OHCollaborative #Youngstown weather camera"
-statusvalue31="tech training will set you free! @OHCollaborative #Youngstown weather camera"
-statusvalue32="artist makers hackers designers students @OHCollaborative #Youngstown weather camera"
-statusvalue33="THINK BUILD SHARE community center @OHCollaborative #Youngstown weather camera"
-statusvalue34="community development tech biz incubator @OHCollaborative #Youngstown weather camera"
-statusvalue35="#Innovation improving the quality of life @OHCollaborative #Youngstown weather camera"
-statusvalue36="#StartUp #Tech 4 stronger community @OHCollaborative #Youngstown weather camera"
-statusvalue37="education is eternal @OHCollaborative #Youngstown weather camera Social Media Jan 6@6pm"
-statusvalue38="School ends #education does NOT @OHCollaborative #Youngstown weather camera Tues@6pm"
-statusvalue39="Meet make collaborate! @OHCollaborative #Youngstown weather camera WEDS@6pm #3dprinting"
-statusvalue40="Build it code it Do it #Makerspace @OHCollaborative #Youngstown weather camera WEDS@6pm"
-statusvalue41="@OHCollaborative #Youngstown weather camera women innovators makers,& #startups TUES@6pm"
-statusvalue42="@OHCollaborative #Youngstown weather camera #innovation WEDS@6pm #makerspace tools & tech"
-statusvalue43="@OHCollaborative #Youngstown weather camera neighborhood tech & love for the good of all"
-statusvalue44="build it #Makerspace it they will come @OHCollaborative #Youngstown weather camera"
-statusvalue45="#Entrepreneur #Innovative @OHCollaborative #Youngstown weather camera #Tech Tues@6pm"
-statusvalue46="Tues@6pm Jan #Social Media @OHCollaborative #Youngstown #accelerator #events #startups"
-statusvalue47="#Tech Tues@6pm @OHCollaborative #Youngstown weather camera #accelerator #events #MARKETING "
-statusvalue48="@3dprinterworks @OHCollaborative #Youngstown weather camera #3dprinting CREATORBOT"
-statusvalue49="#3dPrinting #innovation #Ohio #Manufacturing @OHCollaborative #Youngstown weather camera"
-statusvalue50="#3dPrinting #Manufacturing Click Print build @OHCollaborative #Youngstown weather camera"
-statusvalue51="#cityscape #SeedsOfHope #GrowthHacking #opendata civic hacking @OHCollaborative #Youngstown weather camera"
-statusvalue52="#cityscape #CarpeDiem #civictech open mesh networks @OHCollaborative #Youngstown weather camera"
-statusvalue53="#Coding and Beyond! Using Skills to Make Products @OHCollaborative #Youngstown weather camera"
-statusvalue54="#Science #STEM catch sunrise #CarpeDiem community @OHCollaborative #Youngstown weather camera"
-statusvalue55="#social $TWTR #training Weds 6pm Small Biz #startup @OHCollaborative #Youngstown weather camera"
-statusvalue56="Helping folks help self https://www.facebook.com/returningcitizen @OHCollaborative #Youngstown weather camera"
-statusvalue57="Rapid #web Rails Grails #data #hackathon #Tech Tues 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue58="Programming #raspberrypi #mesh #net networks @OHCollaborative #Youngstown weather camera"
-statusvalue59="PHP Groovy Java #VirtualMachines #Tech Tues 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue60="#MedTech #IoT #security #encryption ask & Learn Tues 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue61="#Inventors club meetup social networking #CRM Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue62="Learn business acceleration #CRM customers calling SPIN Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue63="Videos Media advertising #Sales training for #startups Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue64="old #School #MBA #Science #growth #community Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue65="#StartupAdvice accelerate #Biz late nights hard work Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue66="Fresh Winds Catering Pineapple Chicken WINGS https://t.co/qvx8398MF9 @OHCollaborative #Youngstown weather camera"
-statusvalue67="Fresh Winds Catering hardwork yields GREAT FOOD & RESULTS Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue68="Luck is dividend of sweat more sweat luckier u get Ray Kroc @OHCollaborative #Youngstown weather camera"
-statusvalue69="Luck is dividend of sweat more sweat luckier u get Ray Kroc @OHCollaborative #Youngstown weather camera"
-statusvalue70="Rather b lucky than Good, Glad to be both! @michealdika Weds 6pm @OHCollaborative #Youngstown weather camera"
-statusvalue71="business #accelerator program mentorship support business Wed 6p @OHCollaborative #Youngstown weather camera"
-statusvalue72="cantenna portmanteau blending the words can and antenna Weds6p @OHCollaborative #Youngstown weather camera"
-statusvalue73="@drfbands More u sweat luckier you get Ray Kroc @OHCollaborative #Youngstown weather camera"
-statusvalue74="Rather b lucky than Good, Glad to be both! ditka Weds 6pm @OHCollaborative #Youngstown weather camera"
-#               1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 ^M
-#             "                  2         3         4         5         6         7         8         9         x       110       120        130      140^M
-
-
-
-
-statusList = [statusvalue1, statusvalue2, statusvalue3, statusvalue4, statusvalue5, statusvalue6, statusvalue7, statusvalue8, statusvalue9,statusvalue0,statusvalue11,statusvalue12,statusvalue13, statusvalue14, statusvalue15,statusvalue16,statusvalue17,statusvalue18,statusvalue19,statusvalue20, statusvalue21, statusvalue22, statusvalue23, statusvalue24, statusvalue25, statusvalue26, statusvalue27, statusvalue28,statusvalue29, statusvalue30, statusvalue31,statusvalue32,statusvalue33,statusvalue34, statusvalue35, statusvalue36, statusvalue37, statusvalue38,statusvalue39, statusvalue40,statusvalue41,statusvalue42, statusvalue43, statusvalue44, statusvalue45, statusvalue46, statusvalue47, statusvalue48, statusvalue49, statusvalue50,statusvalue51, statusvalue52, statusvalue53,statusvalue54,statusvalue55, statusvalue56,statusvalue57,statusvalue58, statusvalue59, statusvalue60,statusvalue61, statusvalue62, statusvalue63, statusvalue64, statusvalue65, statusvalue66, statusvalue67, statusvalue68, statusvalue69,statusvalue70, statusvalue71, statusvalue72, statusvalue73, statusvalue74]
-
-
-statusMax = len(statusList)-1
-print ("statusMax=" + str(statusMax))
-statusIndex = random.randint(0,statusMax)
-print ("statusIndex =" + str(statusIndex))
-
-shoutOuts = ["@Youngstown_Buzz", "@Youngstown_News","@EricWFMJ","@DOWNTOWNYTOWN","@21WFMJNews","@vindicator","@21WFMJNews","@StormTracker21", "@WKBN", "@PapaMuzz", "@JaladahA", "@wfmjtoday", "@SteveDeGenaro", "@ReeseClarett13", "@Dbetras", "@SteveWFMJ","@21WFMJNews","@LindsayWFMJ","@CatulloMeats","@V2Youngstown","@9teen84","@HudsonFasteners","@TEDxYoungstown","@NeuvooYoungsto","@AmericaMakes", "@RepTimRyan", "@SenSherrodBrown", "@robportman", "@YMCAYoungstown", "@youngstownstate", "@YtownSocial", "@MayorMcNally", "@HenryJGomez", "@DrinkUpYtown", "@YoungstownOHrr", "@NeuvooYoungsto", "@VindyVibe", "@dskolnick","@WYTV","@KristenOlmi", "@YWCAYoungstown", "@traceywinbush", "@JackTorry1", "@rmltaylor", "@JohnKasich", "@sobeditor", "@stormingorman67", "@VindySweetwood", "@Vindykalea", "@realboomboom" , "@ROCCOVTWEETS", "@ajjaffe", "@TpartyAnita", "@Nick3BP", "@TimContinenza", "@TheBizJournal", "@MillCreekMetro", "@DinoRoss", "@BarryDyngles", "@DanShaker", "@coffeeandcode", "@JumpStartInc", "@DanielRYemma", "@ybiTweets", "@AvalonDowntown", "@DrinkUpYtown", "@MVRYoungstown", "@JimTressel5", "@MyCityHangouts", "@ImbibeMartini", "@royaloaksbar", "@RyanYts", "@Bravura3D", "@jessietuscano", "@TechBeltSummit", "@matylda","@vitollubomir", "@Talljiveturkey", "@TimSchu", "@Makerspaces_com", "@EscotRodrigues", "@StartupSupaStar", "@Ted_Strickland", "@OHDems", "@AnthonyVSpano", "@ConniePillich", "@JoeSchiavoni", "@JimCosslerYBI", "@colleenlowry", "@OHHouseDems", "@wytv" , "@StambaughAud", "@newsyoungstown", "@PaulWetzlWKBN", "@DanMartinWKBN", "@RyanHalickiWYTV", "@JasonCEarnhart", "@weisslabs_", "@Andrew_Pavlick", "@suzie_Homemaker", "@HackPGH", "@assemblepgh", "@makerfairepgh", "@HackCleveland", "@JillMillerZimon", "@makeshoppgh", "@opencleveland", "@openneo", "@NavadaGroup", "@codigodelsur", "@stuffprof", "@3dprinterworks" , "@intogreengarage", "@MVYPclub", "@StartupGrind" ,"@buildingshow", "@occipital", "@StayStacked_" ,"@3dprinterworks", "@3dersorg", "@Stratasys", "@OHManufacturing", "@RubiconProject", "@zynga", "@AdditiveManufac", "@Jaaaybi", "@Owen_OS", "@edla", "@ChopDawgStudios", "@Mixergy", "@spencerXsays", "@innvenio", "@investFeed", "@AngryCPU", "@Aymard_Ravignan", "@judochopau", "@scott_dellosso", "@MetaMeshLLC", "@PittMesh", "@Camp1Ventures", "@steve_hanson3", "@archiplain", "@QBHerve", "@GetTwitfox", "@ProCrowdfunder", "@HeckaSacto", "@FollowRocket_VC", "@PStation_games", "@VGUGaming", "@spencershane", "@syedhaider613", "@RocketDept", "@bazooka_tech", "@mjavier_angel", "@ChauvenetB", "@PeterAudu", "@founders", "@Nichelle_McCall", "@PaintNiteYNG", "@josek_net", "@Arinutt", "@TheCityClub", "@OpenNEO", "@BikeCLE" , "@codeforamerica" , "@waldojaquith", "@DaveWaldron", "@YNGAirport", "@LWVGY", "@YoungstownNDC", "@GreenYoungstown", "@Ytownstrong", "@EAG_YO" ,"@YtownPlayhouse", "@V2Youngstown", "@YoungstownSlim", "@johnesimon51", "@dwcyo", "@GrowYoungstown", "@YoungstownCAP", "@YoungstownKidd", "@YoungstownLive_", "@YSU_STEM", "@YoungstownHub", "@wxyoungstown", "@Flautomatic", "@SCORE_YSU", "@YoungstownCorp", "@studentofdesign", "@adamearn", "@Youngstown0hio", "@IdoraMarket", "@Youngstown_WX", "@YoungstownOH", "@HackYSU", "@YtownWiki", "@YSUInteractive", "@REBIRTHTODAY", "@StepOutYtown", "@FADsYoungstown", "@youngstownOH330", "@susieb4YO", "@Youngstown411", "@ErikaThomasTV", "@royaloaksbar", "@ytown100", "@greytogreenfest", "@RonPotesta", "@Youngstown_Arts", "@YoungstownMusic", "@MillCreekmetrop", "@4JRutherford", "@YoungstownRock", "@ThirstyDogBeer", "@YoloGrilleTAP", "@djbreezey614", "@VETastingLounge", "@GLBC_Cleveland", "@StemNewsDesk", "@VasilisPasparas", "@CanfieldTechs", "@TechBeltSummit", "@tmj_OH_it", "@JAV2", "@1MillionCupsCLE", "@bfeld", "@KauffmanFDN", "@OnshoreMomentum", "@codemash", "@davemcclure", "@fredwilson", "@cdixon", "@sjonsson", "@BonnieSalm","@HireTechGroup", "@a16z", "@ycombinator", "@TheLab_ms", "@NorTech", "@ClevelandPlus", "@JumpStartInc", "@raytleach", "@techczarcle", "@findyour_level","@findyour_level", "@jthogg", "@iwpgh", "@alphalab", "@EnterprForumPgh", "@AdtileHQ", "@swpgh", "@TechShopPGH", "@pghtech", "@TBJiuJitsu", "@johnrampton", "@Funding_Ideator", "@StartupPro", "@dasjoshua","@NedRenzi", "@trueventures", "@mauroferri", "@IanDixonIO", "@ESA_Cluster", "@snipeyhead", "@makers_la", "@ericgoldman", "@binarybits", "@PaulSzoldra", "@Compcoin", "@NeilsonRHall","@AXALab", "@DisruptiveMT", "@TaleiaMueller", "@USATCORP", "@ctrlcollective", "@InvestorsAccred", "@FrankZupan","@twisted__nerve", "@MartinShkreli", "@charlesdg", "@foundersroad", "@bizluke", "@ysu_redi","@FOVentures", "@trueventures", "@yupyork", "@SusaVentures", "@BankingTechno", "@dctechmeetup", "@moonshot_us ","@VijaySondhi1", "@DrMollyKelly", "@DoidaLawGroup", "@sdelbecque", "@Matthew_Hoey", "@yourcommerce1", "@Greymantle", "@ProfOsinbajo", "@NewbornStartups", "@Nouriel", "@LairdTech", "@ianbremmer", "@ashugarg", "@mattroberts", "@alonshklarek",  "@edrelf", "@StartupPro", "@Rosenrosen", "@equity_funder", "@rewolpert", "@alvarombedoya", "@NotionCapital", "@cchrysan", "@Mkclements", "@RWong", "@jbeda", "@omal", "@ahduncan", "@davidvivero", "@RedSwanVentures","@jeffiel", "@@OHSmallBz", "@CincinnatiScore", "@Techcoastangels", "@CleBioNetwork", "@Gwynstone", "@AndreaBelvedere", "@BernieMorenoCo", "@CleveFoundation", "@jeremyuzan", "@MGCleve", "@FreshWaterCLE", "@inthecircle", "@cwru", "@caseweatherhead", "@peck_simon", "@NEOSVF", "@BDMorganFdn", "@weatherheadcmo", "@BioECorp", "@CCInnovations", "@CleveHealthTech", "@CCLRI", "@MAGNETOhio", "@PhysGrassroots" , "@metrohealthCLE", "@CWRUSOM", "@_NEOMED", "@ClevelandITAC", "@IFnortheastohio", "@kylifesciences", "@Startup_van", "@TT_7", "@StartupPGH", "@refreshpitt", "@JustinKownacki", "@jenn_vandam", "@jenn_vandam", "@jimcjen", "@techstars", "@BurgherJon", "@PittVenture", "@nextburgh", "@PittChancellor", "@DraperTriangle", "@PghEntrepreneur", "@phildougherty", "@IanRosenberger", "@mstubler", "@JayKatPgh", "@TomJonesDTVC", "@dfjjosh", "@VCRebecca", "@CanvasVC", "@Morgenthaler_V", "@Slabodkin", "@FrancescoMaio", "@aashish81us", "@DrShlain", "@chrissyfarr", "@Jeremy_Liddle", "@FGraillot", "@Minh_Q_Tran", "@joshk", "@ellendustman", "@maryfranzese", "@AdrianAdewunmi" , "@mjsikorsky", "@eriktorenberg", "@APribetic", "@jordannovet", "@TrustedInsight"]
-
-shoutIndex = random.randint(0,len(shoutOuts)-1)
-print("  shoutIndex = " +  str(shoutIndex) +" shoutout size= " + str(len(shoutOuts)) )
-
-newStatus = statusList[statusIndex][:104] + " " +hourval+ " " + shoutOuts[shoutIndex]
-print("newStatus=" + newStatus)
-print("LENGTH of status=" + str(len(newStatus)))
-
 
 class ReadProperties():
     def __init__(self):
@@ -150,6 +47,8 @@ props = rp.myprops
 print ("props="+ str(props["ACCESS_KEY"])) 				
 print ("test="+ props["test"]) 				
 
+key="1234"
+
 username = props["username"]
 password = props["password"]
 CONSUMER_KEY = props["CONSUMER_KEY"]
@@ -157,8 +56,37 @@ CONSUMER_SECRET = props["CONSUMER_SECRET"]
 ACCESS_KEY = props["ACCESS_KEY"]
 ACCESS_SECRET = props["ACCESS_SECRET"]
 
+# need key value
+try:
+	key = props["key"]
+	print "key value from props in filename.properties file!"
+except: # catch *all* exceptions
+	e = sys.exc_info()[0]
+	print "key value from props in filename.properties file! = " + str(e)
+
 print ("username=" + username + " password=" + password+ " CONSUMER_KEY =" + CONSUMER_KEY + " CONSUMER_SECRET ="+CONSUMER_SECRET +" ACCESS_KEY=" +ACCESS_KEY)
 				
+print ("key KEY KEY KEY  =" + key)
+
+testURL = "https://api.github.com/markdown"
+remoteURL = "http://live.spontaneousorganization.com/appStatus/index1?key="+key
+print("REMOTE URL ="+remoteURL)
+
+statusList = []
+req = urllib2.Request(remoteURL)
+response = urllib2.urlopen(remoteURL)
+statusList = json.load(response)   
+
+statusMax = len(statusList)-1
+print ("statusMax=" + str(statusMax))
+statusIndex = random.randint(0,statusMax)
+print ("statusIndex =" + str(statusIndex))
+
+newStatus = str(statusList[statusIndex]["tweetOutputText"])[:124]  
+print("newStatus=" + newStatus)
+print("LENGTH of status=" + str(len(newStatus)))
+
+
 fileName = "my_gif.GIF"
 print ("fileName = " + fileName )
 
