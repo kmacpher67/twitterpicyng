@@ -69,7 +69,7 @@ print ("username=" + username + " password=" + password+ " CONSUMER_KEY =" + CON
 print ("key KEY KEY KEY  =" + key)
 
 testURL = "https://api.github.com/markdown"
-remoteURL = "http://live.spontaneousorganization.com/appStatus/index1?key="+key
+remoteURL = "http://live.spontaneousorganization.com/appStatus/index2?key="+key
 print("REMOTE URL ="+remoteURL)
 
 statusList = []
@@ -77,10 +77,14 @@ req = urllib2.Request(remoteURL)
 response = urllib2.urlopen(remoteURL)
 statusList = json.load(response)   
 
+print (" statusList = " + str(statusList))
+
 statusMax = len(statusList)-1
 print ("statusMax=" + str(statusMax))
-statusIndex = random.randint(0,statusMax)
+### statusIndex = random.randint(0,statusMax)
+statusIndex = 0
 print ("statusIndex =" + str(statusIndex))
+
 
 newStatus = str(statusList[statusIndex]["tweetOutputText"])[:124]  
 print("newStatus=" + newStatus)
